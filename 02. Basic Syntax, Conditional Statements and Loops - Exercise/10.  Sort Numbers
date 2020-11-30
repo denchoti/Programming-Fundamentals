@@ -1,0 +1,23 @@
+using System;
+using System.Linq;
+
+namespace test
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1 = int.Parse(Console.ReadLine());
+            int num2 = int.Parse(Console.ReadLine());
+            int num3 = int.Parse(Console.ReadLine());
+
+            int[] arr = new int[] {num1, num2, num3};
+            arr = arr.OrderByDescending(c => c).ToArray();
+
+            foreach (int value in arr)
+            {
+                Console.WriteLine(value);
+            }
+        }
+    }
+}
