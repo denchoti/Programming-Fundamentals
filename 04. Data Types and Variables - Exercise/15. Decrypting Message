@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Numerics;
+using System.Threading;
+
+namespace Homework
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            short key = short.Parse(Console.ReadLine());
+            short n = short.Parse(Console.ReadLine());
+
+            string sumMessage = "";
+
+            for (int i = 0; i < n; i++)
+            {
+                char input = char.Parse(Console.ReadLine());
+                int value = input + key;
+                char message = (char)value;
+                sumMessage += message;
+            }
+            Console.WriteLine(sumMessage);
+
+           
+        }
+    }
+}
