@@ -6,25 +6,19 @@ namespace _08.CondenseArrayToNumber
     {
         static void Main(string[] args)
         {
-            string[] input = Console.ReadLine().Split();
-            int[] nums = new int[input.Length];
-            for (int i = 0; i < input.Length; i++)
-            {
-                nums[i] = int.Parse(input[i]);
-            }
-            int n = nums.Length;
+            int[] array = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
-            for (int i = 0; i < n-1; i++)
+            while (array.Length != 1)
             {
-                int[] newArr = new int[nums.Length - 1];
-                for (int j = 0; j < newArr.Length; j++)
+                int[] newArray = new int[array.Length - 1];
+                for (int i = 0; i < newArray.Length; i++)
                 {
-                    newArr[j] = nums[j] + nums[j + 1];
+                    newArray[i] = array[i] + array[i + 1];
                 }
-                nums = newArr;
-               
+                array = newArray;
             }
-            Console.WriteLine(String.Join(" ", nums));
+            
+            Console.WriteLine(string.Join(" ",array));
            
         }
     }
