@@ -1,29 +1,31 @@
 using System;
 
-namespace _01.NationalCourt_29.February._2020_
+namespace _01.BonusScoringSystem_29.February._2020_
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int employee1 = int.Parse(Console.ReadLine());
-            int employee2 = int.Parse(Console.ReadLine());
-            int employee3 = int.Parse(Console.ReadLine());
-            int countPeople = int.Parse(Console.ReadLine());
+            int countStudents = int.Parse(Console.ReadLine());
+            int countLectures = int.Parse(Console.ReadLine());
+            int additionalBonus = int.Parse(Console.ReadLine());
 
-            int effeciencyAll = employee1 + employee2 + employee3; // for one hour all of them
-            int hours = 0;
-
-            while (countPeople > 0)
+            double maxBonus = 0;
+            int maxAttendance = 0;
+            
+            for (int i = 0; i < countStudents; i++)
             {
-                hours++;
-                if (hours % 4 == 0)
+                int attendancePerStudent = int.Parse(Console.ReadLine());
+                double totalBonus = attendancePerStudent  * 1.0 / countLectures * (5 + additionalBonus);
+                if (maxBonus < totalBonus)
                 {
-                    continue;
+                    maxBonus = totalBonus;
+                    maxAttendance = attendancePerStudent;
                 }
-                countPeople -= effeciencyAll;
+                
             }
-            Console.WriteLine($"Time needed: {hours}h.");
+            Console.WriteLine($"Max Bonus: {Math.Ceiling(maxBonus)}.");
+            Console.WriteLine($"The student has attended {maxAttendance} lectures.");
         }
     }
 }
