@@ -20,7 +20,7 @@ namespace SantaSecretHelper
                 for (int i = 0; i < input.Length; i++)
                 {
                     char symbol = (char)(input[i] - key);
-                    result += (symbol);
+                    result += symbol;
                 }
                 result = result.ToString();
 
