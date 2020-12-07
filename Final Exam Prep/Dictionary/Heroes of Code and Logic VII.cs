@@ -103,6 +103,7 @@ namespace HeroesOfCodeAndLogic
                         Console.WriteLine($"{hero} healed for {heal} HP!");
                         break;
                 }
+                
                 commands = Console.ReadLine();
             }
             heroes = heroes.OrderByDescending(x => x.Value[0])
