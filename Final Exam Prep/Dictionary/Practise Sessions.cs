@@ -30,7 +30,6 @@ namespace _14.April._2019_01.PractiseSessions
                         {
                             roads[road].Add(racer);
                         }
-                        
                         break;
 
                     case "Move":
