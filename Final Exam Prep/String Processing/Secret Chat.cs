@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace SecretChat
 {
@@ -28,12 +29,17 @@ namespace SecretChat
                         {
                             int start = message.IndexOf(substring);
                             message = message.Remove(start, substring.Length);
-                            string reversed = "";
+                            // alternative 1:
+                            //string reversed = "";
 
-                            for (int i = substring.Length - 1; i >= 0; i--)
-                            {
-                                reversed += substring[i];
-                            }
+                            //for (int i = substring.Length - 1; i >= 0; i--)
+                            //{
+                            //    reversed += substring[i];
+                            //}
+                            //message = message + reversed;
+                            var reversed = String.Concat(substring.Reverse());
+                            //alternative 2:
+                            // var reversed = new string(substring.Reverse().ToArray());
                             message = message + reversed;
                             Console.WriteLine(message); 
                         }
