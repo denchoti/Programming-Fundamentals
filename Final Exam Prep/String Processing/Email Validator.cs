@@ -47,6 +47,10 @@ namespace EmailValidator
                         {
                             Console.WriteLine(text.Substring(0, text.IndexOf('@')));
                         }
+                         else
+                        {
+                            Console.WriteLine($"The email {text} doesn't contain the @ symbol.");
+                        }
                         break;
 
                     case "Replace":
