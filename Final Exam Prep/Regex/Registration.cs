@@ -32,6 +32,7 @@ namespace Registration
                     Console.WriteLine("Invalid username or password");
                 }
             }
+            
             Console.WriteLine($"Successful registrations: {registrations}");
         }
     }
