@@ -64,6 +64,7 @@ namespace _07.December._2019_InboxManager
                     Console.WriteLine($"- {user.Value[i]}");
                 }
                 
+                
             }
 
         }
