@@ -1,5 +1,4 @@
 # Programming Fundamentals 
-Homework and problems from the programming fundamentals course from SoftUni.
 
 Topics: 
 1. Basic Syntax, Conditional Statements and Loops 
